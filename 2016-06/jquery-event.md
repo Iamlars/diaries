@@ -1,11 +1,12 @@
 #  jQuery 事件用法详解
 
+### 目录
 
-[简介](#description)
+####[简介](#description)
 
-[实现原理](#principle)
+####[实现原理](#principle)
 
-[事件操作](#do)
+####[事件操作](#do)
 
 > [绑定事件](#on)
 
@@ -16,7 +17,7 @@
 > [事件委托](#delegate)
 
 
-[事件操作进阶](#up)
+####[事件操作进阶](#up)
 
 > [阻止默认事件](#preventDefault)
 

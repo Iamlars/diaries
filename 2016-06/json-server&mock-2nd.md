@@ -3,13 +3,13 @@
 上一篇演示了如何安装并运行 `json server` , 在这里将使用第三方库让模拟的数据更加丰满和实用。
 
 
-目录：
+###目录：
 
-[使用动态数据](#data)
+####[使用动态数据](#data)
 
-[为什么选择mockjs](#diff_with_faker)
+####[为什么选择mockjs](#diff_with_faker)
 
-[mockjs用法示例](#mock)
+####[mockjs用法示例](#mock)
 
 > [安装mockjs](#install)
 

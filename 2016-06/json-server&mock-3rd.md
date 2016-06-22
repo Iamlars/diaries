@@ -3,9 +3,9 @@
 前面演示了如何安装并运行 `json server` , 和使用第三方库真实化模拟数据 , 下面将展开更多的配置项和数据操作。
 
 
-目录：
+###目录：
 
-[配置项](#config)
+####[配置项](#config)
 
 > [返回静态文件](#static)
 
@@ -13,10 +13,10 @@
 
 > [自定义路由](#route)
 
-[npm启动](#package)
+####[npm启动](#package)
 
 
-[数据过滤](#filter)
+####[数据过滤](#filter)
 
 > [属性值(Filter)](#prop)
 
@@ -31,7 +31,7 @@
 > [关系图谱(Relationships)](#relationships)
 
 
-[作为中间件](#middleware)
+####[作为中间件](#middleware)
 
 
 上一篇 [用JSON-server模拟REST API(二) 动态数据](./json-server&mock-2nd.md)
