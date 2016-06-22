@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "mock": "json-server db.js"
+  },
+  "dependencies": {
+    "faker": "^3.1.0",
+    "json-server": "^0.8.14",
+    "mockjs": "^1.0.1-beta2"
+  },
+  "name": "mock_demo",
+  "version": "1.0.0",
+  "description": "demo for json-server and mockjs",
+  "main": "jquery.js",
+  "devDependencies": {},
+  "keywords": [
+    "json-server",
+    "mockjs"
+  ],
+  "author": "Iamlars",
+  "license": "ISC"
+}
