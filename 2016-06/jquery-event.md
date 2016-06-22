@@ -34,7 +34,6 @@
 [jquery中文文档](http://www.jquery123.com/)
 
 <a name='description'></a>
-=============
 ##简介
  `jquery` 之所以成为最受欢迎的前端库，很大一部分是得益于它的事件具有良好的语义，
 优秀的兼容性，并且便于管理和扩展。
@@ -42,7 +41,6 @@
 在这里我会介绍 `jquery` 事件的一些比较基础的用法。
 
 <a name='principle'></a>
-=============
 ##实现原理
 
  `jquery` 事件脱胎于浏览器的 `addEventListener (W3)` 和 `attachEvent (IE)` 方法 , 
@@ -147,7 +145,6 @@ $(selector).delagate(selector2, event, func)
 事件委托原理及性能分析详见 [解密jQuery事件核心 - 委托设计（二）](http://www.cnblogs.com/aaronjs/p/3447483.html)
 
 <a name='up'></a>
-=============
 ##事件操作进阶
 上面列举了一些简单的事件绑定，解绑和委托的使用，下面会说到一些更加个性化的用法。
 

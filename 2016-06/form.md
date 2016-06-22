@@ -33,7 +33,6 @@
 
 
 <a name='props'></a>
-======
 ##表单属性
 accept-charset  ===字符集
 action ===url
@@ -44,7 +43,6 @@ method == put,get,post
 name == 名字
 target==打开方式
 <a name='elements'></a>
-======
 ##表单元素
 
 form[elements]
@@ -74,7 +72,6 @@ button和input在safari下的默认外观
 修改radio和checkbox外观
 
 <a name='handle'></a>
-======
 ##表单操作
 
 <a name='get'></a>
@@ -97,7 +94,6 @@ form.submit()
 默认提交规则
 jquery 表单序列化
 <a name='skill'></a>
-======
 ##技巧
 
 <a name='clean'></a>
