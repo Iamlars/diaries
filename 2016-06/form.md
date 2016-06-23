@@ -365,6 +365,8 @@ multiple示例
 ###常识
 下面是对于上面表格的一些总结，也加入了一些新的知识点
 * 没有 `name` 和有 `disable` 的字段不会被提交
+* 同一个表单中，相同name的字段值会发生覆盖，`radio` 和 `checkbox` 除外
+* 在低版本浏览器中，name可以作为id使用
 * 忽略或使用浏览器不支持的 `type` 会转为 `type=text`
 * 低版本浏览器不支持动态改变 `type`
 * 点击 `button` 会默认提交表单
@@ -385,6 +387,7 @@ button和input在safari下的默认外观
 
 <a name='get'></a>
 ###取值
+
 >form[elements]
 
 >form[length]
@@ -392,6 +395,8 @@ button和input在safari下的默认外观
 >form[index]
 
 >form[name]
+
+input.value
 
 <a name='set'></a>
 ###赋值
