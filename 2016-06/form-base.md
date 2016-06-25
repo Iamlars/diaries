@@ -1,4 +1,4 @@
-#form表单那点事儿
+#form表单那点事儿(上) 基础篇
 
 做为html中最为常见，应用最广泛的标签之一，form常伴随前端左右。了解更深，用的更顺。
 
@@ -11,25 +11,6 @@
 > [常识](#general)
 
 > [模拟外观](#skin)
-
-####[表单操作](#handle)
-> [取值](#get)
-
-> [赋值](#set)
-
-> [重置](#reset)
-
-> [校验](#checkValidity)
-
-> [提交](#submit)
-
-####[技巧](#skill)
-
-> **[不提交空字段](#clean)**
-
-> **[异步提交文件](#async)**
-
-> **[用作延时链接](#delay)**
 
 
 <a name='props'></a>
@@ -116,9 +97,7 @@
     </tr>
 </table>
 
-下面举例的表单将会以 `post` 方式将input的值以 `utf-8` 编码格式提交到 `/login` 接口，
-并会打开一个新页面显示返回结果，
-由于 `target="blank"` ，所以就算提交多次该表单，都只会继续刷新之前打开的窗口。
+下面举例的表单将会以 `post` 方式将input的值以 `utf-8` 编码格式提交到 `/login` 接口，并会打开一个新页面显示返回结果，由于 `target="blank"` ，所以就算提交多次该表单，都只会继续刷新之前打开的窗口。
 ````html
 <!DOCTYPE html>
 <html lang="en">
@@ -145,7 +124,7 @@
         <th width=230>属性值</th>
         <th>描述</th>
     </thead>
-    <tr> <td colspan=3 bgcolor='beige'>**必须**</td></tr>
+    <tr> <td colspan=3 bgcolor='#eee'><strong>必须</strong></td></tr>
     <tr>
         <td>type</td>
         <td>
@@ -163,7 +142,7 @@
         <td>字符串</td>
         <td>form提交时，该字段的key，忽略value属性的元素将不会被提交</td>
     </tr>
-    <tr><td colspan=3 bgcolor='beige'>**状态**</td></tr>
+    <tr><td colspan=3 bgcolor='#eee'><strong>状态</strong></td></tr>
     <tr>
         <td>checked</td>
         <td>任意值 或 忽略该属性</td>
@@ -184,12 +163,11 @@
         <td>任意值 或 忽略该属性</td>
         <td>除拥有readonly的特征外，表单提交时，将忽略此字段</td>
     </tr>
-    <tr><td colspan=3 bgcolor='beige'>**限制**</td></tr>
+    <tr><td colspan=3 bgcolor='#eee'><strong>限制</strong></td></tr>
     <tr>
         <td>form</td>
         <td>表单id</td>
-        <td>该元素将作为指定id表单字段被提交。用于 `button` 或 `input type='submit'` 元素时，
-        将提交指定id的表单 [示例代码](#form)</td>
+        <td>该元素将作为指定id表单字段被提交。用于 `button` 或 `input type='submit'` 元素时，将提交指定id的表单 <a href='#form'>示例代码</a></td>
     </tr>
     <tr>
         <td>accept</td>
@@ -198,7 +176,7 @@
         <p> `video/*` 只能上传视频</p>
         </td>
         <td>
-          `input type='file'` 使用的属性，是一个MIME类型的值，或文件后缀名。 [示例代码](#accept)
+          `input type='file'` 使用的属性，是一个MIME类型的值，或文件后缀名。 <a href='#accept'>示例代码</a>
         </td>
     </tr>
     <tr>
@@ -207,8 +185,7 @@
           任意值 或 忽略该属性
         </td>
         <td>
-        `input type='file'` 或 `select` 或 应用了 `datalist` 的表单元素才能应用该属性
-         [示例代码](#multiple)
+        `input type='file'` 或 `select` 或 应用了 `datalist` 的表单元素才能应用该属性<a href='#multiple'>示例代码</a>
         </td>
     </tr>
     <tr>
@@ -244,7 +221,7 @@
         </td>
         <td>页面加载时，该元素自动聚焦，应用于多个表单元素时，聚焦到第一个</td>
     </tr>
-    <tr><td colspan=3 bgcolor='beige'>**展示**</td></tr>
+    <tr><td colspan=3 bgcolor='#eee'><strong>展示</strong></td></tr>
     <tr>
         <td>placeholder</td>
         <td>
@@ -258,13 +235,12 @@
         字符串 或 数值
         </td>
         <td>
-          input 或 progress 展示的值 [示例代码](#value)
+          input 或 progress 展示的值,其中：
+          checkbox和radio的默认值是 'on' <br>
+          range和progress的默认值是 0 <br>
+          progress的是0的时候会播放循环动画 <br>
+          <a href='#value'>示例代码</a>
         </td>
-    </tr>
-
-
-    <tr>
-        <td colspan=3></td>
     </tr>
 </table>
 
@@ -379,58 +355,93 @@ multiple示例
 
 <a name='skin'></a>
 ###模拟外观
-button和input在safari下的默认外观
-修改radio和checkbox外观
+
+有一千种浏览器，就有一千种表单元素外观。在以前，要想改变表单元素外观，需要通过其他标签来模拟。
+而在现代浏览器上，通过css3的`appearance`属性( [兼容情况](http://caniuse.com/#search=-webkit-appearance) )指定元素的渲染风格，
+再结合`:after`,`:before`伪元素，可以做出很酷炫的表单元素外观。
+
+作为可替换元素，input标签无法使用伪元素。当然这只是W3标准。以下点到名的表单元素，还是可以照常使用`:after`,`:before`的。
+
+`input type='radio'` , `input type='checkbox'` , `input type='file'` , `input type='range'` , `button` , `progress`.
+
+`appearance`是css3的标准属性，面对现实，很多时候还是需要加上`-webkit-` ，`-moz-` 前缀，举一个把checkbox做成开关的例子：
+
+````html
+<style>
+    input[type='checkbox'] {
+        -webkit-appearance: none;
+        padding: 9px;
+        border-radius: 50px;
+        display: inline-block;
+        position: relative;
+        outline: 0;
+        -webkit-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+        width: 70px;
+        height: 33px;
+    }
+    
+    input[type='checkbox']:before,
+    input[type='checkbox']:after {
+        position: absolute;
+        content: '';
+        border-radius: 100px;
+        -webkit-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+    }
+    
+    input[type='checkbox']:before {
+        background: white;
+        top: 1px;
+        left: 1px;
+        z-index: 2;
+        width: 31px;
+        height: 31px;
+        box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    input[type='checkbox']:after {
+        content: 'OFF';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
+        line-height: 34px;
+        font-size: 14px;
+        background: #eee;
+        color: #ccc;
+        text-indent: 35px;
+        box-sizing: border-box;
+        box-shadow: 0 0 1px #eee;
+    }
+    
+    input[type='checkbox']:checked:before {
+        left: 37px;
+    }
+    
+    input[type='checkbox']:checked:after {
+        content: 'ON';
+        color: #fff;
+        text-indent: 10px;
+        background: #4cda60;
+    }
+</style>
+<input type="checkbox">
+````
+
+不出意外，长成这样 ![checkbox](../images/form-checkbox.png) ,![checkbox](../images/form-chekbox-checked.png)
+
+
+**示例代码来自**[10个HTML5美化版复选框和单选框](http://www.html5tricks.com/10-pretty-checkbox-radiobox.html)
 
 <a name='handle'></a>
-##表单操作
 
-<a name='get'></a>
-###取值
 
->form[elements]
+#### 参考资料
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form)
 
->form[length]
-
->form[index]
-
->form[name]
-
-input.value
-
-<a name='set'></a>
-###赋值
-
-<a name='reset'></a>
-###重置
-form.reset()
-<a name='checkValidity'></a>
-###校验
-required
-pattern
-form.checkValidity()
-<a name='submit'></a>
-###提交
-form.submit()
-默认提交规则
-jquery 表单序列化
-监听提交事件
-<a name='skill'></a>
-##技巧
-
-<a name='clean'></a>
-###不提交空字段
-disabled;
-
-<a name='async'></a>
-###异步提交文件
-new FormData()
-iframe
-
-<a name='delay'></a>
-###用作延时链接
-form.submit() target='_blank'
-
+[w3.org](https://www.w3.org/TR/html5/forms.html)
 
 
 

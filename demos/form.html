@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 </head>
+
 <body>
     <form action="/page1" name='page1' id='page1'></form>
-    
+
     <form action="/login" name='login' id='login'>
-        <input type="text"  value='1' autofocus maxlength="3.8">
+        <input type="text"  autofocus maxlength="3.8">
+        <input type="checkbox" name='aihao' id='cccc'>
+        <input type="radio" name='aiha1o' id='dddd'>
+        <!--<input type="checkbox" name='aihao'>
+        <input type="checkbox" name='aihao'>
+        <input type="checkbox" name='aihao'>-->
         <!--<input type="text" form='page1' name='username1' autofocus value='2'>-->
         <button form='page1'>提交到page1</button>
         <!--<button>提交到login</button>-->
     </form>
-    
+
     <label>Cc: <input type=email multiple name=cc list=contacts></label>
     <datalist id="contacts">
         <option value="hedral@daw.com">
@@ -20,16 +27,80 @@
         <option value="astphy@cute.mple">
         <option value="anomy@scile.org">
     </datalist>
-    
+
     <select name='number' value='3'>
         <option value="">1</option>
         <option value="">3</option>
         <option value="">5</option>
     </select>
-    
+
     <input type="file" multiple>
     <textarea name="" id="" cols="30" rows="10" value='dsdfsafasdf'></textarea>
-    <progress value='70' max='100'></progress>
+    <progress  max='100' id='ee'></progress>
     <input type="range" value='40' max='100'>
+
+    <style>
+        input[type='checkbox'] {
+            -webkit-appearance: none;
+            padding: 9px;
+            border-radius: 50px;
+            display: inline-block;
+            position: relative;
+            outline: 0;
+            -webkit-transition: all 0.1s ease-in;
+            transition: all 0.1s ease-in;
+            width: 70px;
+            height: 33px;
+        }
+        
+        input[type='checkbox']:before,
+        input[type='checkbox']:after {
+            position: absolute;
+            content: '';
+            border-radius: 100px;
+            -webkit-transition: all 0.1s ease-in;
+            transition: all 0.1s ease-in;
+        }
+        
+        input[type='checkbox']:before {
+            background: white;
+            top: 1px;
+            left: 1px;
+            z-index: 2;
+            width: 31px;
+            height: 31px;
+            box-shadow: 0 3px 1px rgba(0, 0, 0, 0.05), 0 0px 1px rgba(0, 0, 0, 0.3);
+        }
+        
+        input[type='checkbox']:after {
+            content: 'OFF';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 0 0 #eee, 0 0 1px rgba(0, 0, 0, 0.4);
+            line-height: 34px;
+            font-size: 14px;
+            background: #eee;
+            color: #ccc;
+            text-indent: 35px;
+            box-sizing: border-box;
+            box-shadow: 0 0 1px #eee;
+        }
+        
+        input[type='checkbox']:checked:before {
+            left: 37px;
+        }
+        
+        input[type='checkbox']:checked:after {
+            /*content: 'ON';*/
+            color: #fff;
+            text-indent: 10px;
+            background: #4cda60;
+        }
+    </style>
+    <input type="checkbox">
+
 </body>
+
 </html>
