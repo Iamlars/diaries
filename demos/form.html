@@ -9,7 +9,7 @@
     <form action="/page1" name='page1' id='page1'></form>
 
     <form action="/login" name='login' id='login'>
-        <input type="text"  autofocus maxlength="3.8">
+        <input type="text" autofocus maxlength="3.8">
         <input type="checkbox" name='aihao' id='cccc'>
         <input type="radio" name='aiha1o' id='dddd'>
         <!--<input type="checkbox" name='aihao'>
@@ -36,7 +36,7 @@
 
     <input type="file" multiple>
     <textarea name="" id="" cols="30" rows="10" value='dsdfsafasdf'></textarea>
-    <progress  max='100' id='ee'></progress>
+    <progress max='100' id='ee'></progress>
     <input type="range" value='40' max='100'>
 
     <style>
@@ -100,7 +100,90 @@
         }
     </style>
     <input type="checkbox">
-
+    <table width='100%'>
+        <tbody>
+            <thead>
+                <th>表单元素</th>
+                <th>type<br></th>
+                <th>规则<br></th>
+            </thead>
+            <tr>
+                <td>&lt;input&gt;<br></td>
+                <td>button<br></td>
+                <td>永远不提交<br></td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>checkbox</td>
+                <td>只在勾选后提交</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>file</td>
+                <td>永远提交，即使为空值</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>hidden</td>
+                <td>永远提交，即使为空值</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>image</td>
+                <td>永远提交，即使为空值</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>password</td>
+                <td>永远提交，即使为空值</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>radio</td>
+                <td>只在勾选后提交，如果一组Radio没有任何勾选，全部不提交。</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>reset</td>
+                <td>永远不提交<br></td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>submit</td>
+                <td>点击哪个按钮，则提交这个按钮的值，其他的SUBMIT按钮值都不提交。<br>如果表单的提交行为是由JavaScript脚本触发的，则不提交任何值。<br></td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>text</td>
+                <td>永远提交，即使为空值</td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;<br></td>
+                <td>button<br></td>
+                <td>永远不提交<br></td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;</td>
+                <td>reset</td>
+                <td>永远不提交</td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;</td>
+                <td>submit</td>
+                <td>点击哪个按钮提交表单，则提交这个按钮的值。<br>如果省略TYPE，IE默认为BUTTON，火狐默认SUBMIT。</td>
+            </tr>
+            <tr>
+                <td>&lt;select&gt;<br></td>
+                <td>-<br></td>
+                <td>永远提交，即使为空值。</td>
+            </tr>
+            <tr>
+                <td>&lt;textarea&gt;<br></td>
+                <td>-</td>
+                <td>永远提交，即使为空值。</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
