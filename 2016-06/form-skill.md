@@ -2,24 +2,25 @@
 
 上一篇主要温习了一下form表单的属性和表单元素，这一片主要讲解用JavaScript如何操作form。
 
-###目录：
+目录：
 
-####[表单操作](#handle)
-> [取值](#get)
+[表单操作](#handle)
 
-> [赋值](#set)
+* [取值](#get)
 
-> [重置](#reset)
+* [赋值](#set)
 
-> [校验](#checkValidity)
+* [重置](#reset)
 
-> [提交](#submit)
+* [校验](#checkValidity)
 
-####[技巧](#skill)
+* [提交](#submit)
 
-> **[不提交空字段](#clean)**
+[技巧](#skill)
 
-> **[异步提交文件](#async)**
+* **[不提交空字段](#clean)**
+
+* **[异步提交文件](#async)**
 
 <a name='handle'></a>
 ##表单操作

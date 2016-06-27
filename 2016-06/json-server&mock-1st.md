@@ -8,21 +8,21 @@ REST风格的API接口，给前端页面提供虚拟的数据，是非常有必�
 支持GET, POST, PUT, PATCH 和 DELETE 方法，更提供了一系列的查询方法，
 如limit，order等。下面我将详细介绍 `json server` 的使用。
 
-###目录：
+目录：
 
-####[安装](#install)
+[安装](#install)
 
-####[运行](#run)
-> [通过命令行](#run_by_cli)
+[运行](#run)
+* [通过命令行](#run_by_cli)
 
-> [使用package.json](#run_by_npm)
+* [使用package.json](#run_by_npm)
 
-####[操作数据](#method)
-> [get](#get)
+[操作数据](#method)
+* [get](#get)
 
-> [post](#post)
+* [post](#post)
 
-> [put](#put)
+* [put](#put)
 
 [用JSON-server模拟REST API(二)  动态数据](./json-server&mock-2nd.md)
 
@@ -229,4 +229,7 @@ $.ajax({
 
 **PATCH 和 DELETE 使用方式同上，就不做演示了。**
 
+#### 参考资料
+
 > [json-server 仓库地址](https://github.com/typicode/json-server)
+

@@ -4,7 +4,7 @@
 ## 目录
 
 ### JavaScript
->[混合应用中的js调用(写作中)](./2016-06/js-in-hybird-app.md)
+>[混合应用中的javascript实践](./2016-06/js-in-hybird-app.md)
 
 >[jQuery 事件用法详解](./2016-06/jquery-event.md)
 
@@ -17,6 +17,8 @@
 ### CSS
 
 ### HTML
+>[浅谈web语义化(写作中)](./2016-06/semantic.md)
+
 >[form表单那点事儿(上) 基础篇](./2016-06/form-base.md)
 
 >[form表单那点事儿(下) 进阶篇](./2016-06/form-skill.md)

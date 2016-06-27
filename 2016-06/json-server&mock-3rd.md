@@ -3,35 +3,35 @@
 前面演示了如何安装并运行 `json server` , 和使用第三方库真实化模拟数据 , 下面将展开更多的配置项和数据操作。
 
 
-###目录：
+目录：
 
-####[配置项](#config)
+[配置项](#config)
 
-> [返回静态文件](#static)
+* [返回静态文件](#static)
 
-> [移动设备访问](#mobile)
+* [移动设备访问](#mobile)
 
-> [自定义路由](#route)
+* [自定义路由](#route)
 
-####[npm启动](#package)
-
-
-####[数据过滤](#filter)
-
-> [属性值(Filter)](#prop)
-
-> [分割(Slice)](#slice)
-
-> [排序(Sort)](#sort)
-
-> [运算符(Operators)](#operators)
-
-> [全文检索(Full-text search)](#full_text_search)
-
-> [关系图谱(Relationships)](#relationships)
+[npm启动](#package)
 
 
-####[作为中间件](#middleware)
+[数据过滤](#filter)
+
+* [属性值(Filter)](#prop)
+
+* [分割(Slice)](#slice)
+
+* [排序(Sort)](#sort)
+
+* [运算符(Operators)](#operators)
+
+* [全文检索(Full-text search)](#full_text_search)
+
+* [关系图谱(Relationships)](#relationships)
+
+
+[作为中间件](#middleware)
 
 
 上一篇 [用JSON-server模拟REST API(二) 动态数据](./json-server&mock-2nd.md)
@@ -71,7 +71,7 @@ Examples:
 既可以通过命令行方式单行配置，如
 
 ````
-json-server db.js -p 3008 -d 500 -q -r ./routes.json
+json-server db.js -p 3003 -d 500 -q -r ./routes.json
 ````
 
 ，也可以通过 `json-server.json` 文件进行配置后：
@@ -81,7 +81,7 @@ json-server db.js -p 3008 -d 500 -q -r ./routes.json
 
 {
     "host": "0.0.0.0",
-    "port": "3008",
+    "port": "3003",
     "watch": false,
     "delay": 500,
     "quiet": true,
@@ -98,7 +98,7 @@ json-server db.js
 在 `/mock` 下建立 `public` 目录，即可直接访问其下的所有静态文件，包括但不限于
 `js`, `css` ,`markdown` 文件等。
 
-地址栏输入 `http://localhist:3008/readme.md`  即可访问以下文件
+地址栏输入 `http://localhist:3003/readme.md`  即可访问以下文件
 ````json
 # /mock/public/readme.md
 
@@ -112,7 +112,7 @@ json-server db.js
 windows下面通过 `ipconfig` 查找到电脑的局域网地址，mac设备是通过 `ifconfig | grep "inet " | grep -v 127.0.0.1
 ` 查看。
 
-比如我的电脑局域网ip是 `192.168.0.6`,在手机上访问 `http://192.168.0.6:3008`  即可。
+比如我的电脑局域网ip是 `192.168.0.6`,在手机上访问 `http://192.168.0.6:3003`  即可。
 
 <a name='route'></a>
 ### 自定义路由
@@ -286,5 +286,11 @@ GET /news/1?_expand=post
 具体API详见 [json server模块](https://github.com/typicode/json-server#module)
 
 **全文完**
+
+#### 参考资料
+
+> [json-server 仓库地址](https://github.com/typicode/json-server)
+
+> [mockjs 仓库地址](https://github.com/nuysoft/Mock)
 
 > [本文demo](../demos/mock/)

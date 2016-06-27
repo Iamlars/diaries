@@ -1,35 +1,35 @@
 #  jQuery 事件用法详解
 
-### 目录
+目录
 
-####[简介](#description)
+[简介](#description)
 
-####[实现原理](#principle)
+[实现原理](#principle)
 
-####[事件操作](#do)
+[事件操作](#do)
 
-> [绑定事件](#on)
+* [绑定事件](#on)
 
-> [解除事件](#off)
+* [解除事件](#off)
 
-> [触发事件](#trigger)
+* [触发事件](#trigger)
 
-> [事件委托](#delegate)
+* [事件委托](#delegate)
 
 
-####[事件操作进阶](#up)
+[事件操作进阶](#up)
 
-> [阻止默认事件](#preventDefault)
+* [阻止默认事件](#preventDefault)
 
-> [阻止事件传播](#stopPropagation)
+* [阻止事件传播](#stopPropagation)
 
-> [阻止事件向后执行](#stopImmediatePropagation)
+* [阻止事件向后执行](#stopImmediatePropagation)
 
-> [命名空间](#namespace)
+* [命名空间](#namespace)
 
-> [自定义事件](#costomEvent)
+* [自定义事件](#costomEvent)
 
-> [事件队列](#flow)
+* [事件队列](#flow)
 
 
 [jquery中文文档](http://www.jquery123.com/)

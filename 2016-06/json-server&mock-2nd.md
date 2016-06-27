@@ -3,23 +3,23 @@
 上一篇演示了如何安装并运行 `json server` , 在这里将使用第三方库让模拟的数据更加丰满和实用。
 
 
-###目录：
+目录：
 
-####[使用动态数据](#data)
+[使用动态数据](#data)
 
-####[为什么选择mockjs](#diff_with_faker)
+[为什么选择mockjs](#diff_with_faker)
 
-####[mockjs用法示例](#mock)
+[mockjs用法示例](#mock)
 
-> [安装mockjs](#install)
+* [安装mockjs](#install)
 
-> [Mock.mock](#mock_mock)
+* [Mock.mock](#mock_mock)
 
-> [Mock.Random](#mock_random)
+* [Mock.Random](#mock_random)
 
-> [为什么不在浏览器中使用mockjs](#diff_with_mock)
+* [为什么不在浏览器中使用mockjs](#diff_with_mock)
 
-> [示例](#mock_example)
+* [示例](#mock_example)
 
 上一篇 [用JSON-server模拟REST API(一) 安装运行](./json-server&mock-1st.md)
 
@@ -272,8 +272,10 @@ json-server db.js -p 3003
 
 **以上为本章全部内容**
 
+#### 参考资料
 
 > [json-server 仓库地址](https://github.com/typicode/json-server)
+
 > [mockjs 仓库地址](https://github.com/nuysoft/Mock)
 
 
