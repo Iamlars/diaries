@@ -4,7 +4,7 @@
 ## 目录
 
 ### JavaScript
->混合应用中的js调用(规划中)
+>[混合应用中的js调用(写作中)](./2016-06/js-in-hybird-app.md)
 
 >[jQuery 事件用法详解](./2016-06/jquery-event.md)
 
