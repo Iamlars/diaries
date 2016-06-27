@@ -4,16 +4,22 @@
 
 目录
 
-* [概念](#concept)
+[概念](#concept)
+
   * [什么是混合应用](#what_is_hybird_app)
   * [混合方式](#how_to_hybird_app)
-* [交互](#interactive)
+  
+[交互](#interactive)
+
   * [方法注入](#inject)
   * [参数传递](#param)
   * [方法监听](#listen)
   * [资源加载](#resource)
-* [调试](#debug)
-* [其他](#other)
+  
+[调试](#debug)
+
+[其他](#other)
+
   * [兼容性](#compatibility) 
   * [特性启用](#features) 
   * [局部视图](#local_view) 
@@ -157,7 +163,10 @@ SUBMIT_BUTTON.CLICK(function(){
 ##调试
 html的移动端调试时很困难的，嵌入app的html调试更是难上加难。因为js和app的方法相互调用，任何一方出错，都会导致程序不按套路运行。
 除了仔细的约定两端的方法和检查代码的错误外，还需要一个强力的工具。在这里推荐使用 [vConsole](https://github.com/WechatFE/vConsole/blob/dev/README_CN.md) ，可以比较直观的定位到错误。
-![vConsole](https://github.com/WechatFE/vConsole/blob/dev/example/snapshot/log_panel.png)
+
+> vConsole 截图
+
+![vConsole](../images/log_panel.png)
 
 
 <a name='other'></a>
