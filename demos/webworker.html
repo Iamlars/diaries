@@ -5,29 +5,39 @@
     <meta charset="UTF-8">
     <title>web worker demo</title>
 </head>
-<!--<script src='pinyin.js'></script>-->
+<script src='pinyin.js'></script>
 <body>
     <textarea name="" id="a1" cols="30" rows="10"></textarea>
     <pre id="b1"></pre>
     
     <script>
-        var worker = new Worker("pinyin.js");
-            worker.onmessage = function(event){
-                switch (event.data.type){
-                    case "pinyin-out":
-                        b1.innerHTML = JSON.stringify(event.data.message,null,2);
-                        break;
-               }
-            };
+                  
+        a1.oninput = function(){
+                    console.time('trans-pinyin');
+    
+             
+             b1.innerHTML = JSON.stringify(window.getPinYin(this.value,'-'),null,2);
+    console.timeEnd('trans-pinyin');   
+     }
+        
+        
+        // var worker = new Worker("pinyin.js");
+        //     worker.onmessage = function(event){
+        //         switch (event.data.type){
+        //             case "pinyin-out":
+        //                 b1.innerHTML = JSON.stringify(event.data.message,null,2);
+        //                 break;
+        //        }
+        //     };
 
            
-        a1.oninput = function(){
-          worker.postMessage({
-                type: "pinyin",
-                join: '-',
-                value: this.value
-            });
-        }
+        // a1.oninput = function(){
+        //   worker.postMessage({
+        //         type: "pinyin",
+        //         join: '-',
+        //         value: this.value
+        //     });
+        // }
     </script>
 </body>
 

@@ -5,6 +5,8 @@
 
 
     function PinYinMethod() {
+        
+        var store = {};
 
         function getSinglePinYin(val) {
             var _key = '';
@@ -19,33 +21,27 @@
 
         return function (str,join) {
             var _name = [],
-                _char = '',
-                _firstChar = '',
-                _firstCharUp = '',
-                _reg = /[a-z0-9A-Z\-\s ]/;
-                var str0 = str.split(/([\u4e00-\u9fa5])/)
-                console.log(str0)
-            var str1 = str.replace(/[\u4e00-\u9fa5]/g,function(item){
-                return getSinglePinYin(item);
-            })    
-            
-            
-            
-            
-
-            // for (var i = 0, len = str.length; i < len; i++) {
-            //     var _val = str[i];
-            //     if (!_reg.test(_val)) {
-            //         _val = getSinglePinYin(_val);
-            //         _firstChar += _val.length ? _val[0] : '';
-            //     }
+                _firstChar = '';
                 
-            //     _name.push(_val);
-            // }
-            return {
+            if(store[str]){
+                return store[str];
+            }    
+              
+            var str1 = str
+            .split(/(?=[\u4e00-\u9fa5]|(?=\b))/).map(function(item){
+                var singlePinyin =  getSinglePinYin(item);
+                // 提取首字母
+                if(singlePinyin.length)_firstChar+=singlePinyin[0];
+                return singlePinyin;
+            })
+            .join(join);
+            
+            store[str] = {
                 full: str1,
-                // first: _firstChar
-            }
+                first: _firstChar
+            };
+            
+            return store[str]
         }
 
     }
@@ -59,10 +55,12 @@
 
     self.onmessage = function (event) {
         if (event.data.type == "pinyin") {
+            console.time('trans-pinyin');
             self.postMessage({
                 type: "pinyin-out",
                 message: getPinYin(event.data.value, event.data.join)
             });
+             console.timeEnd('trans-pinyin');
 
         }
     };
