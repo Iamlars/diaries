@@ -19,7 +19,7 @@
             return _key.length ? _key : val;
         }
 
-        return function (str,join) {
+        return function (str) {
             var _name = [],
                 _firstChar = '';
                 
@@ -27,14 +27,14 @@
                 return store[str];
             }    
               
-            var str1 = str
-            .split(/(?=[\u4e00-\u9fa5]|(?=\b))/).map(function(item){
+            var str1 = str.split('')
+            .map(function(item){
                 var singlePinyin =  getSinglePinYin(item);
                 // 提取首字母
                 if(singlePinyin.length)_firstChar+=singlePinyin[0];
                 return singlePinyin;
             })
-            .join(join);
+            .join('');
             
             store[str] = {
                 full: str1,
@@ -55,13 +55,10 @@
 
     self.onmessage = function (event) {
         if (event.data.type == "pinyin") {
-            console.time('trans-pinyin');
             self.postMessage({
                 type: "pinyin-out",
-                message: getPinYin(event.data.value, event.data.join)
+                message: getPinYin(event.data.value)
             });
-             console.timeEnd('trans-pinyin');
-
         }
     };
 

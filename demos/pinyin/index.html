@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pinyin demo</title>
+</head>
+<script src='pinyin.js'></script>
+<body>
+    <input type="search" id='a1' placeholder="检索">
+    <pre id="b2"></pre>
+    
+    
+    
+    <script>
+        
+        var list = ['四川大学','电子科技大学','江西大学'];
+        var listPinyin = list.slice(0).map(function(item){
+            return {
+                pinyin: window.getPinYin(item),
+                text: item
+            };
+        })
+        
+                  
+        a1.oninput = function(){    
+            b2.innerHTML = search(this.value).join('\n')
+        }
+        
+        function search(text){
+            return listPinyin
+            .slice(0)
+            .filter(function(item){
+                return item.pinyin.full.indexOf(text)>-1 || item.pinyin.first.indexOf(text)>-1
+            })
+            .map(function(item){
+                return item.text;
+            })
+        }
+        
+        // var worker = new Worker("pinyin.js");
+        //     worker.onmessage = function(event){
+        //         switch (event.data.type){
+        //             case "pinyin-out":
+        //                 b1.innerHTML = JSON.stringify(event.data.message,null,2);
+        //                 break;
+        //        }
+        //     };
+
+           
+        // a1.oninput = function(){
+        //   worker.postMessage({
+        //         type: "pinyin",
+        //         value: this.value
+        //     });
+        // }
+    </script>
+</body>
+
+</html>
