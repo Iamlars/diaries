@@ -4,7 +4,7 @@
 ## 目录
 
 ### JavaScript
->[通过HTML5地理定位搜索附近的学校(计划中)](./2016-09/gro.md)
+>[通过HTML5地理定位搜索附近的学校(写作中)](./2016-09/geo.md)
 
 >[使用拼音进行中文检索](./2016-09/pinyin.md)
 
@@ -19,7 +19,7 @@
 >[用JSON-server模拟REST API(一) 安装运行](./2016-06/json-server&mock-1st.md)
 
 ### CSS
->[~选择器的妙用(计划中)](./2016-09/select-next.md)
+>[+ 选择器的妙用(计划中)](./2016-09/select-next.md)
 
 ### HTML
 >[浅谈web语义化](./2016-07/semantic.md)
